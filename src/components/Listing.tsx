@@ -1,5 +1,5 @@
-import { IItem } from "../models/item";
-import ListItem from "./ListItem";
+import { IItem } from '../models/item';
+import ListItem from './ListItem';
 
 interface IItems {
     items: IItem[]
@@ -8,9 +8,8 @@ interface IItems {
 export default function Listing({ items }: IItems) {
 
     return (
-        <div className="item-list">
-            {items.filter(item => item.state !== 'removed')
-                .map(item => {
+        <div className='item-list'>
+            {items.map(item => {
                 
                     return (
                     <ListItem 
